@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manual Interactivo del Ciclo de Vida del Desarrollo de Software (SDLC) en 7 fases: Planificación, Análisis, Diseño, Desarrollo, Testing, Despliegue y Mantenimiento.">
+  <title>SDLC Nexus — Manual Interactivo del Ciclo de Vida del Software</title>
+  
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Encabezado de Navegación -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="brand-icon" aria-hidden="true">⚙️</div>
+        <div class="brand-title">
+          SDLC Nexus
+          <span class="brand-badge">v1.0.0</span>
+        </div>
+      </div>
+
+      <nav class="header-nav" aria-label="Navegación principal">
+        <a href="#pipeline-section" class="nav-link active">7 Fases</a>
+        <a href="#checklist-section" class="nav-link">Checklist Entregables</a>
+        <a href="#methodologies-section" class="nav-link">Metodologías</a>
+        <a href="#quiz-section" class="nav-link">Autoevaluación</a>
+        <a href="#glossary-section" class="nav-link">Glosario</a>
+      </nav>
+
+      <div class="header-search">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input type="text" id="global-search" class="search-input" placeholder="Buscar concepto o fase..." aria-label="Buscar concepto o fase">
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Principal -->
+  <header class="hero-section">
+    <div class="hero-pill">Arquitectura & Ecosistema de Ingeniería</div>
+    <h1 class="hero-title">Ciclo de Vida del Desarrollo de Software</h1>
+    <p class="hero-subtitle">
+      Explora con rigor técnico el marco metodológico estándar de 7 etapas para concebir, construir, asegurar y operar software escalable de alta confiabilidad.
+    </p>
+
+    <!-- Indicadores Clave -->
+    <div class="hero-stats">
+      <div class="stat-box glass-panel">
+        <div class="stat-val">7</div>
+        <div class="stat-lbl">Fases SDLC</div>
+      </div>
+      <div class="stat-box glass-panel">
+        <div class="stat-val">28+</div>
+        <div class="stat-lbl">Entregables Clave</div>
+      </div>
+      <div class="stat-box glass-panel">
+        <div class="stat-val" id="stat-deliverables-done">0%</div>
+        <div class="stat-lbl">Progreso del Checklist</div>
+      </div>
+      <div class="stat-box glass-panel">
+        <div class="stat-val">100%</div>
+        <div class="stat-lbl">Cliente Offline / SPA</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="main-content">
+
+    <!-- Sección 1: Diagrama Interactivo de Fases (Stepper + Visor) -->
+    <section id="pipeline-section" class="sdlc-pipeline-area" aria-labelledby="heading-pipeline">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-pipeline">🔄 Pipeline Interactivo de las 7 Fases</h2>
+          <p>Selecciona cualquier etapa para inspeccionar actividades, artefactos, roles y herramientas.</p>
+        </div>
+      </div>
+
+      <!-- Stepper horizontal -->
+      <div class="pipeline-stepper" id="pipeline-stepper" role="tablist" aria-label="Fases del SDLC">
+        <!-- Generado dinámicamente vía app.js -->
+      </div>
+
+      <!-- Panel de Detalles de la Fase -->
+      <article class="phase-viewer-panel glass-panel" id="phase-viewer">
+        <div class="phase-hero-info">
+          <div class="phase-title-wrap">
+            <div class="phase-big-icon" id="phase-big-icon" aria-hidden="true">📋</div>
+            <div class="phase-head-txt">
+              <h3 id="phase-title">Fase 1: Planificación</h3>
+              <p class="phase-tagline" id="phase-tagline">Definición de objetivos, alcance, viabilidad y estimación de recursos.</p>
+            </div>
+          </div>
+          <div class="phase-role-badge" id="phase-role">
+            <span>👥</span> <strong>Roles clave:</strong> Project Manager, Product Owner, FinOps
+          </div>
+        </div>
+
+        <div class="phase-grid-details">
+          <div class="detail-block">
+            <h4>📖 Descripción & Alcance Técnico</h4>
+            <p id="phase-summary">
+              Etapa fundacional donde se conceptualiza la iniciativa técnica o de negocio, evaluando viabilidad económica, operativa y técnica, y se establece el cronograma maestro y la asignación de recursos.
+            </p>
+
+            <h4>⚡ Actividades Principales de Ingeniería</h4>
+            <ul class="activity-list" id="phase-activities">
+              <!-- Renderizado dinámico -->
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <h4>📦 Artefactos y Entregables Formales</h4>
+            <ul class="deliverable-list" id="phase-deliverables">
+              <!-- Renderizado dinámico -->
+            </ul>
+
+            <h4 style="margin-top: 1.5rem;">🛠️ Herramientas & Ecosistema Recomendado</h4>
+            <div class="tools-cloud" id="phase-tools">
+              <!-- Renderizado dinámico -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones de Navegación Rápida de Fase -->
+        <div class="phase-nav-btns">
+          <button type="button" class="btn-phase-step" id="btn-prev-phase" disabled>← Inicio</button>
+          <button type="button" class="btn-phase-step" id="btn-next-phase">Requisitos →</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sección 2: Checklist Interactivo de Entregables por Fase -->
+    <section id="checklist-section" class="checklist-section-area" aria-labelledby="heading-checklist">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-checklist">✅ Checklist de Entregables de Calidad</h2>
+          <p>Supervisa el cumplimiento de artefactos clave por cada fase del ciclo de vida.</p>
+        </div>
+      </div>
+
+      <div class="checklist-container glass-panel">
+        <div class="checklist-controls">
+          <div class="progress-track-wrap">
+            <div class="progress-labels">
+              <span>Nivel de Madurez del Proyecto</span>
+              <span id="progress-percent-txt">0 / 28 (0%)</span>
+            </div>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+          </div>
+          <button type="button" class="btn-secondary" id="btn-reset-checklist">Reiniciar Checklist</button>
+        </div>
+
+        <div class="checklist-grid" id="checklist-grid">
+          <!-- Renderizado dinámico de tarjetas por fase -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Comparativa de Metodologías de Desarrollo -->
+    <section id="methodologies-section" class="methodologies-area" aria-labelledby="heading-methodologies">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-methodologies">⚖️ Enfoques y Modelos de Ciclo de Vida</h2>
+          <p>Contraste de modelos tradicionales frente a ciclos continuos y adaptativos.</p>
+        </div>
+      </div>
+
+      <div class="methodology-grid">
+        <!-- Agile / Scrum -->
+        <article class="method-card glass-panel">
+          <div class="method-header">
+            <h3>Ágil / Scrum</h3>
+            <span class="method-badge agile">Iterativo & Incremental</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Ciclos cortos (Sprints de 1-4 semanas) con entregas continuas de valor e inspección y adaptación constante con stakeholders.
+          </p>
+          <div class="method-procon">
+            <div class="procon-box pro">
+              <strong>Ventajas Clave</strong>
+              Alta flexibilidad ante cambios, feedback temprano del usuario y rápida mitigación de riesgos de producto.
+            </div>
+            <div class="procon-box con">
+              <strong>Retos</strong>
+              Menor predictibilidad del presupuesto inicial y demanda disciplina continua en los equipos.
+            </div>
+          </div>
+        </article>
+
+        <!-- DevOps / CI-CD -->
+        <article class="method-card glass-panel">
+          <div class="method-header">
+            <h3>DevOps & Edge</h3>
+            <span class="method-badge devops">Continuo & Automatizado</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Integración total de desarrollo y operaciones mediante pipelines de automatización continua, observabilidad y despliegues sin downtime.
+          </p>
+          <div class="method-procon">
+            <div class="procon-box pro">
+              <strong>Ventajas Clave</strong>
+              Time-to-market drásticamente reducido, despliegues frecuentes y confiables con feedback en tiempo real.
+            </div>
+            <div class="procon-box con">
+              <strong>Retos</strong>
+              Curva de aprendizaje en infraestructura como código y necesidad de rigurosa disciplina de tests automatizados.
+            </div>
+          </div>
+        </article>
+
+        <!-- Cascada / Waterfall -->
+        <article class="method-card glass-panel">
+          <div class="method-header">
+            <h3>Cascada (Waterfall)</h3>
+            <span class="method-badge waterfall">Secuencial Lineal</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Cada fase debe completarse formalmente antes de comenzar la siguiente. Fuerte énfasis en contratos y documentación previa.
+          </p>
+          <div class="method-procon">
+            <div class="procon-box pro">
+              <strong>Ventajas Clave</strong>
+              Estructura rígida fácil de presupuestar, ideal para proyectos críticos de hardware o normativas estáticas.
+            </div>
+            <div class="procon-box con">
+              <strong>Retos</strong>
+              El software no es visible hasta etapas finales; los cambios de alcance tardíos son sumamente costosos.
+            </div>
+          </div>
+        </article>
+
+        <!-- Espiral / Prototipado -->
+        <article class="method-card glass-panel">
+          <div class="method-header">
+            <h3>Espiral (Boehm)</h3>
+            <span class="method-badge spiral">Orientado a Riesgos</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Combina el enfoque iterativo con el análisis sistemático de riesgos técnicos y financieros en cada ciclo de la espiral.
+          </p>
+          <div class="method-procon">
+            <div class="procon-box pro">
+              <strong>Ventajas Clave</strong>
+              Excelente para sistemas masivos y de alta complejidad donde la mitigación de riesgos es la prioridad absoluta.
+            </div>
+            <div class="procon-box con">
+              <strong>Retos</strong>
+              Elevada complejidad de gestión y dependencia de expertos sénior en evaluación continua de riesgos.
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 4: Autoevaluación Interactiva (Quiz) -->
+    <section id="quiz-section" class="quiz-area" aria-labelledby="heading-quiz">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-quiz">🧠 Autoevaluación de Conceptos SDLC</h2>
+          <p>Valida tus conocimientos sobre buenas prácticas, fases y artefactos de desarrollo.</p>
+        </div>
+      </div>
+
+      <div class="quiz-wrapper glass-panel">
+        <div class="quiz-header">
+          <span style="font-weight: 600; font-size: 0.95rem;">Test de Competencias de Ingeniería</span>
+          <span style="font-family: var(--font-mono); color: var(--accent-cyan); font-size: 0.88rem;">Pregunta <span id="quiz-current-num">1</span> de <span id="quiz-total-num">5</span></span>
+        </div>
+
+        <div class="quiz-question-box">
+          <div class="quiz-q-num">Cuestión Técnica</div>
+          <div class="quiz-q-text" id="quiz-question-text">
+            ¿En qué fase del SDLC se define la arquitectura de software, los modelos de base de datos y los contratos OpenAPI?
+          </div>
+        </div>
+
+        <div class="quiz-options-list" id="quiz-options-box">
+          <!-- Opciones inyectadas vía JS -->
+        </div>
+
+        <div class="quiz-feedback" id="quiz-feedback" role="alert"></div>
+
+        <div class="quiz-actions">
+          <button type="button" class="btn-primary" id="btn-quiz-next" style="display: none;">Siguiente Pregunta →</button>
+          <button type="button" class="btn-secondary" id="btn-quiz-restart" style="display: none;">Reiniciar Test</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5: Glosario de Conceptos Clave -->
+    <section id="glossary-section" class="glossary-area" aria-labelledby="heading-glossary">
+      <div class="section-header">
+        <div>
+          <h2 id="heading-glossary">📚 Glosario Técnico de Ingeniería</h2>
+          <p>Términos fundamentales del ciclo de vida y aseguramiento de software.</p>
+        </div>
+      </div>
+
+      <div class="glossary-grid" id="glossary-grid">
+        <!-- Renderizado dinámico vía app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="brand-group">
+        <div class="brand-icon" style="width: 30px; height: 30px; font-size: 1rem;">⚙️</div>
+        <strong>SDLC Nexus — Manual de Ingeniería de Software</strong>
+      </div>
+      <div class="footer-links">
+        <a href="#pipeline-section">7 Fases</a>
+        <a href="#checklist-section">Checklist</a>
+        <a href="#methodologies-section">Metodologías</a>
+        <a href="#quiz-section">Quiz</a>
+        <a href="#glossary-section">Glosario</a>
+      </div>
+      <p class="footer-copy">
+        Portafolio Codex © 2026. Diseñado bajo estándares de ingeniería de software, arquitectura moderna y HSL Design System.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script Principal -->
+  <script src="js/app.js"></script>
+</body>
+</html>
